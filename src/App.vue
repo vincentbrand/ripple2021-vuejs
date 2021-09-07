@@ -1,32 +1,86 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+<div class="app">
+
+  <div v-if='releaseRouter.includes($route.path)'>
     <router-view/>
   </div>
-</template>
 
+  <div id="wrapper" v-else>
+    <!-- Sidebar -->
+    <cu-sidebar />
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <!-- Main Content -->
+      <div id="content">
+        <cu-navbar />
+        <div class="container-fluid">
+          <router-view/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div v-if='!releaseRouter.includes($route.path)'>
+    <cu-footer />
+    <a class="scroll-to-top rounded" href="#page-top" style="display: inline;">
+      <i class="fas fa-angle-up"></i>
+    </a>
+  </div>
+
+</div>
+</template>
+<script>
+import cuNavbar from '@/components/app/navbar'
+import cuSidebar from '@/components/app/sidebar'
+import cuFooter from '@/components/app/footer'
+export default {
+
+  components: {
+    "cu-navbar":cuNavbar,
+    "cu-sidebar":cuSidebar,
+    "cu-footer":cuFooter
+  },
+
+  data: () => ({
+    releaseRouter: ['/notfound', '/login', '/forgot'],
+    isRelease: false
+  }),
+
+  created () {
+    const lang = this.$cookie.get('lang')?this.$cookie.get('lang'): 'zh'
+    this.$i18n.locale = lang
+  },
+
+}
+</script>
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+.text-ripple{
+  color: #d11083;
 }
 
-#nav {
-  padding: 30px;
+.btn-primary {
+  color: #fff;
+  background-color: #d11083 !important;
+  border-color: #d11083 !important;
+}
+.sidebar-heading{
+  padding: .5rem .5rem 0!important;
+  span{
+   color: #999;
+   font-weight: 800;
+ }
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+.el-table .warning-row {
+  background: oldlace;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.el-table .success-row {
+  background: #f0f9eb;
+}
+
+.el-table .danger-row {
+  background: #d11083;
 }
 </style>
+

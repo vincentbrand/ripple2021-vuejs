@@ -1,0 +1,98 @@
+{
+    "home": {
+        "title": "Welcome to Ripple !",
+        "content": "Let's start a new journey!"
+    },
+    "card": {
+        "title": "Notification",
+        "content": "According to our finance records your membership is expiring soon. Please renew on time to ensure access to your data and our system."
+    },
+    "login": {
+        "msg": "Start making waves",
+        "name": "Usernam",
+        "password": "Password",
+        "remember": "Remember password",
+        "login": "SIGN IN",
+        "forgot": "Forgot password?",
+        "forgotMsg": {
+            "hint": "Forgot Your Password?",
+            "start": "We get it, stuff happens. Just enter your email address below and we'll send you a link to reset your password!",
+            "btn": "reset password",
+            "already": "Already have an account? Login!"
+        }
+    },
+    "common": {
+        "loading": "loading",
+        "notfound": "Page Not Found",
+        "errhint": "Looks like you found a bug in the system...",
+        "errback": "Back to Dashboard",
+        "ok": "Yes",
+        "cancel": "Cancel",
+        "deleteHint": "Are you sure you want to delete it?",
+        "warning": "warning",
+        "success": "success",
+        "error": "error",
+        "danger": "danger",
+        "upload": "Drag the file here, or click Upload"
+    },
+    "navigation": {
+        "navbar": {
+            "search": "Search",
+            "language": "Language",
+            "alerttop": "Alerts",
+            "alertfooter": "Show All Alerts",
+            "messagetop": "Inbox",
+            "messagefooter": "Read All Message",
+            "profile": "Profile",
+            "settings": "Settings",
+            "invoices": "Invoices",
+            "activity": "Activity Log",
+            "logout": "Logout"
+        },
+        "sidemenu": {
+
+        }
+    },
+    "pages": {
+        "support": {
+            "formTitle": "Support Form",
+            "formText":"For all support your contact details are logged,\nwe will get in touch as soon as possible.",
+            "formOptions":{
+                "technical": "Technical Issue",
+                "purchase": "Purchase Issue",
+                "authentication": "Authentication Issue",
+                "other": "Other Issue"
+            },
+            "formButton": "Report Issue",
+            "supportService":{
+                "online": {
+                    "line1": "Our support team is available",
+                    "line2": "Click here to contact them"
+                },
+                "offline":{
+                    "line1": "Unfortunatly our support team is unavailable",
+                    "line2": "Try again on 10:00 - 17:00 any weekday"
+                }
+            },
+            "editor":{
+                "changedState": "Your app configuration has changed, would you like to publish the new app?",
+                "tabs":{
+                    "basic": "Basic Settings",
+                    "navigation": "Navigation",
+                    "splashpage": "Splash",
+                    "news": "News",
+                    "booking": "Booking",
+                    "contact": "Contact"
+                },
+                "forms": {
+                    "layout": "Select Layout",
+                    "transition": "Transition Delay",
+                    "logo": "Set Logo",
+                    "btnSave": "Save Settings"
+                }
+            }
+
+        }
+
+    }
+}
