@@ -82,12 +82,10 @@ export default {
     goLogin () {
       this.disabled = true
       if (this.formData.username=='root@ripple.cn'&&this.formData.password=='123456') {
-
         setTimeout(() => {
           this.disabled = false
           this.$router.push('/')
-        }, 3000)
-
+        }, 1000)
       } else {
         this.disabled = false
       }

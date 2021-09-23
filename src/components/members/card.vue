@@ -1,7 +1,7 @@
 <template>
 <div class="row">
     <div class="col-xl-3 col-lg-3" v-for="info in data" :key='info.id'>
-        <div class="card shadow mb-4">
+        <div class="card mb-4">
             <div class="card-body">
                 <div class="row">
                     <div class="col-3">

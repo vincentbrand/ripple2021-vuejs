@@ -3,14 +3,17 @@
     <!-- warning -->
     <div class="col-xl-12 mb-3" v-if="stateChanged">
       <div class="row bg-warning py-3 my-3" id="publishAlert">
-        <div class="col-xl-9 col-lg-9 text-center">
-          <p class="pull-left">
+        <div class="col-xl-8 col-lg-8 col-md-6 text-left">
+          <p class="pull-left my-1">
             Your app configuration has changed, would you like to publish the new app?
           </p>
         </div>
-        <div class="col-xl-3 col-lg-3 text-right">
-          <button class="btn btn-success pull-right mr-3" type="button">
-            <i class="fas fa-globe"></i> Publish App
+        <div class="col-xl-4 col-lg-4 col-md-6 text-right">
+          <button class="btn btn-info btn-sm pull-right mr-3" type="button">
+            <i class="fas fa-save"></i> Save
+          </button>
+          <button class="btn btn-success btn-sm btn-disabled pull-right mr-3" type="button" disabled>
+            <i class="fas fa-globe"></i> Publish
           </button>
           <i class="fas fa-times-circle close-alert-icon" id="closePublishAlert"></i>
         </div>
@@ -34,6 +37,7 @@
           >
         </li>
 
+        <!--
         <li
           v-for="(item, idx) in navPillsList"
           :class="$route.path.includes(item) ? 'nav-item active' : 'nav-item'"
@@ -43,6 +47,18 @@
             >{{ item }} page</router-link
           >
         </li>
+        -->
+
+        <li
+            v-for="(item, index) in mp.navigation"
+            :class="$route.path.includes(item.type) ? 'nav-item active' : 'nav-item'"
+            :key="index"
+        >
+          <router-link :to="'/emulator/' + item.type" class="nav-link" tag="button"
+          >{{ item.title }}</router-link
+          >
+        </li>
+
 
         <li class="nav-item active ml-2" @click="showModal">
           <button class="nav-link"><i class="fas fa-plus"></i></button>
@@ -67,11 +83,16 @@
               <div class="col-md-12">
                 <div class="form-group">
                   <label for="exampleFormControlSelect1">Page Type</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>News Page</option>
-                    <option>Booking Page</option>
-                    <option>Static Page</option>								
+                  <select class="form-control" id="exampleFormControlSelect1" v-model="newPageType">
+                    <option value="booking">Booking Page</option>
+                    <option value="news">News Page</option>
+                    <option value="static">Static Page</option>
+                    <option value="splash">Splash Page</option>
                   </select>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Page Title</label>
+                  <input type="text" class="form-control" placeholder="My Page" v-model="newPageTitle">
                 </div>
                 <div>
                   <div class="form-check">
@@ -83,8 +104,8 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-secondary" type="button" @click="isModal = false">Cancel</button>
-            <a class="btn btn-primary" href="#">Add Page</a>
+            <button class="btn btn-secondary btn-sm" type="button" @click="isModal = false">Cancel</button>
+            <button class="btn btn-primary btn-sm" @click="addPage">Add Page</button>
           </div>
         </div>
       </div>
@@ -105,15 +126,66 @@ export default {
   data: () => ({
     stateChanged: false,
     lang: "en",
-    navPillsList: ["splash", "news", "booking", "contact"],
+    // navPillsList: ["splash", "news", "booking", "contact"],
     isModal: false,
-
     layout: "",
     layoutList: [
       "Background Image with logo",
       "Background Image without logo",
       "Background Color with logo",
     ],
+    // form configs
+    newPageType:'Booking',
+    newPageTitle:'',
+    /*
+    newPage:{
+      type:'',
+      title:''
+    },
+     */
+    // newPageType:'',
+    // newPageName:'',
+    form:{
+      mptitle:'Test',
+      multilanguage:true,
+      autotranslate:false
+    },
+
+    // object coming from MP
+    mp:{
+      navigation:[{
+        type: 'splash',
+        title:'Splash'
+      },{
+        type: 'Booking',
+        title:'Booking'
+      },{
+        type: 'News',
+        title:'News'
+      },{
+        type: 'contact',
+        title:'Contact Us'
+      },{
+        type: 'static',
+        title:'Facilities'
+      },{
+        type: 'static',
+        title:'Prices'
+      }],
+      pages:[{
+        splash:{
+          title:'',
+          content:{
+            bgcolor:'#fff',
+            bggradient:false,
+            logo:false,
+            bgimg:false
+          },
+        }
+      },
+      ]
+    },
+    newMP:{}
   }),
 
   computed: {
@@ -144,20 +216,46 @@ export default {
       this.stateChanged = true;
     },
 
-    showModal () {
+    showModal() {
       this.isModal = true;
       document.getElementsByTagName('body')[0].className = 'open-modal';
+    },
+
+
+
+    addPage(){
+      var newPage = {};
+      this.newPage.type = this.newPageType;
+      this.newPage.title = this.newPageTitle;
+      this.mp.pages.push(newPage);
+    },
+
+    versionControl(){
+      // check if this approach can be replaced
+      // Using Lodash
+      // _.isEqual(one, two);
+      // this check will flag on order changes while Lodash will check exact matches without the order etc
+      if( JSON.stringify(this.mp) === JSON.stringify(this.newMP) ){
+        // similar no issue
+      }else{
+        // change has been made
+      }
     }
+
   },
 
   created() {
     this.$store.dispatch("getEmulatorConfig")
 
+    /*
     document.addEventListener("mouseup", e => {
       let m = `x: ${e.clientX} | y: ${e.clientY}`;
       console.log(m);
     })
+    */
 
+    // create a copy of the current mp on start
+    this.newMP = this.mp;
   },
 
   mounted() {
@@ -175,6 +273,12 @@ export default {
   text-align: center;
   background:rgba(246,194,62,0.2) !important;
   color:#333;
+}
+
+.btn-disabled{
+  background: #666;
+  color:#fff;
+  border:none;
 }
 
 

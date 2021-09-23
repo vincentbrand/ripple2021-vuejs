@@ -33,6 +33,7 @@
 import cuNavbar from '@/components/app/navbar'
 import cuSidebar from '@/components/app/sidebar'
 import cuFooter from '@/components/app/footer'
+
 export default {
 
   components: {
@@ -47,7 +48,7 @@ export default {
   }),
 
   created () {
-    const lang = this.$cookie.get('lang')?this.$cookie.get('lang'): 'zh'
+    const lang = this.$cookie.get('lang') ? this.$cookie.get('lang'): 'en'
     this.$i18n.locale = lang
   },
 

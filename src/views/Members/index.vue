@@ -1,54 +1,69 @@
 <template>
   <div>
+
     <div class="row">
       <div class="col-xl-12 col-lg-12">
-        <div class="card shadow mb-4">
+        <div class="card mb-4">
           <div class="card-body">
+
             <div class="row">
               <div class="col-6">
-                <div class="input-group">
-                  <input
-                    type="text"
-                    class="form-control bg-light border-0 small"
-                    placeholder="Filter by ID or Name"
-                  />
-                  <div class="input-group-append">
-                    <button class="btn btn-primary" type="button">
-                      <i class="fas fa-filter fa-sm"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="col-3">
-                Some Range filters here for dates
-              </div>
-              <div class="col-3">
-                range filters here for points/wallet
+                <span class="pull-left mb-3 float-left">
+                  <h4>Members</h4>
+                </span>
 
+              </div>
+              <div class="col-6">
+
+                <router-link
+                    to=""
+                    tag="button"
+                    class="btn btn-primary btn-sm pull-right mb-3 float-right"
+                >
+                  <i class="fas fa-plus-circle"></i> New Customer
+                </router-link>
                 <!-- display switcher -->
-                <div class="pull-right float-right">
-                  <button class="btn btn-primary" @click="() => isCard = !isCard">
+                <div class="float-right">
+                  <button class="btn btn-primary btn-sm mx-2" @click="() => isCard = !isCard">
                     <i class="fas fa-th-large fa-sm"></i>
+                  </button>
+                </div>
+                <!-- END OF: display switcher -->
+                <!-- display switcher -->
+                <div class="float-right">
+                  <button class="btn btn-primary btn-sm " @click="filterPopup">
+                    <i class="fas fa-filter fa-sm"></i>
                   </button>
                 </div>
                 <!-- END OF: display switcher -->
               </div>
             </div>
+
+
+
+            <cu-card :data='dataSource' v-if="isCard"></cu-card>
+            <cu-table :data='dataSource' v-else></cu-table>
           </div>
+
+          <!-- pagination -->
+          <div class="ml-4">
+            <ul class="pagination pagination-primary m-b-0">
+              <li class="page-item disabled"><a class="page-link" href="javascript:void(0);">{{ $t('common.previous') }}</a></li>
+              <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0);">{{ $t('common.next') }}</a></li>
+            </ul>
+          </div>
+          <!-- end of pagination -->
         </div>
       </div>
     </div>
-
-    <cu-card :data='dataSource' v-if="isCard"></cu-card>
-
-    <cu-table :data='dataSource' v-else></cu-table>
-    
-
   </div>
 </template>
 
 <script>
-import cuTable from '@/components/members/table';
+import cuTable from '@/components/tables/members';
 import cuCard from '@/components/members/card';
 export default {
     name: 'Customers',
@@ -61,6 +76,11 @@ export default {
         dataSource: [],
         isCard: false
     }),
+    methods:{
+      filterPopup(){
+        console.log('filterPopup');
+      }
+    },
 
     created () {
         for(let i=0; i<10; i++) {

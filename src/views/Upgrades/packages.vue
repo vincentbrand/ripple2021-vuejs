@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-    <div class="col-xl-3 col-lg-3">
+    <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
       <div class="card shadow mb-4">
         <div class="card-header card-sale bg-bronze text-white">
           Bronze
@@ -14,24 +14,29 @@
               Up to <b><i>500</i></b> Members
             </li>
             <li><i class="fas fa-check"></i> Multiple Venues</li>
-            <li><i class="fas fa-check"></i> Custom Layouts and Design</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> Custom Layouts and Design</li>
             <li><i class="fas fa-times"></i> Free Updates</li>
-            <li><i class="fas fa-times"></i> Web version and Mini program</li>
+            <li class="text-cutoff"><i class="fas fa-times"></i> Web version and Mini program</li>
             <li><i class="fas fa-times"></i> Automatic Reports</li>
             <li><i class="fas fa-times"></i> Team Management</li>
             <li><i class="fas fa-times"></i> Full Support</li>
             <li><i class="fas fa-times"></i> SMS notifications</li>
           </ul>
-          <h6 class="price">¥1888</h6>
+          <hr>
+          <p class="old-price">¥1288</p>
+          <h6 class="price">¥888</h6>
+          <router-link to="purchase/cart" class="btn btn-success btn-block text-white">
+            <i class="fas fa-shopping-basket"></i> Purchase
+          </router-link>
           <hr />
-          <a href="support" class="btn btn-primary btn-block text-white">
-            <i class="fa fas fa-phone"></i> CONTACT US
-          </a>
+          <router-link to="support" class="btn btn-primary btn-block text-white">
+            <i class="fas fa-phone"></i> CONTACT US
+          </router-link>
         </div>
       </div>
     </div>
 
-    <div class="col-xl-3 col-lg-3">
+    <div class="col-xl-3 col-lg-6 col-md-6">
       <div class="card shadow mb-4">
         <div class="card-header card-sale bg-silver">
           Silver
@@ -45,24 +50,29 @@
               Up to <b><i>1000</i></b> Members
             </li>
             <li><i class="fas fa-check"></i> Multiple Venues</li>
-            <li><i class="fas fa-check"></i> Custom Layouts and Design</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> Custom Layouts and Design</li>
             <li><i class="fas fa-check"></i> Free Updates</li>
-            <li><i class="fas fa-check"></i> Web version and Mini program</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> Web version and Mini program</li>
             <li><i class="fas fa-times"></i> Automatic Reports</li>
             <li><i class="fas fa-times"></i> Team Management</li>
             <li><i class="fas fa-times"></i> Full Support</li>
             <li><i class="fas fa-times"></i> SMS notifications</li>
           </ul>
-          <h6 class="price">¥3888</h6>
+          <hr>
+          <p class="old-price">¥2588</p>
+          <h6 class="price">¥1888</h6>
+          <router-link to="purchase/cart" class="btn btn-success btn-block text-white">
+            <i class="fas fa-shopping-basket"></i> Purchase
+          </router-link>
           <hr />
-          <a href="support" class="btn btn-primary btn-block text-white">
-            <i class="fa fas fa-phone"></i> CONTACT US
-          </a>
+          <router-link to="support" class="btn btn-primary btn-block text-white">
+            <i class="fas fa-phone"></i> CONTACT US
+          </router-link>
         </div>
       </div>
     </div>
 
-    <div class="col-xl-3 col-lg-3">
+    <div class="col-xl-3 col-lg-6 col-md-6">
       <div class="card shadow mb-4">
         <div class="card-header card-sale bg-gold2">
           Gold
@@ -76,24 +86,29 @@
               Up to <b><i>5000</i></b> Members
             </li>
             <li><i class="fas fa-check"></i> Multiple Venues</li>
-            <li><i class="fas fa-check"></i> Custom Layouts and Design</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> Custom Layouts and Design</li>
             <li><i class="fas fa-check"></i> Free Updates</li>
-            <li><i class="fas fa-check"></i> Web version and Mini program</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> Web version and Mini program</li>
             <li><i class="fas fa-check"></i> Automatic Reports</li>
             <li><i class="fas fa-check"></i> Team Management</li>
             <li><i class="fas fa-check"></i> Full Support</li>
             <li><i class="fas fa-check"></i> SMS notifications</li>
           </ul>
-          <h6 class="price">¥6888</h6>
+          <hr>
+          <p class="old-price">¥3788</p>
+          <h6 class="price">¥2888</h6>
+          <router-link to="purchase/cart" class="btn btn-success btn-block text-white">
+            <i class="fas fa-shopping-basket"></i> Purchase
+          </router-link>
           <hr />
-          <a href="support" class="btn btn-primary btn-block text-white">
-            <i class="fa fas fa-phone"></i> CONTACT US
-          </a>
+          <router-link to="support" class="btn btn-primary btn-block text-white">
+            <i class="fas fa-phone"></i> CONTACT US
+          </router-link>
         </div>
       </div>
     </div>
 
-    <div class="col-xl-3 col-lg-3">
+    <div class="col-xl-3 col-lg-6 col-md-6">
       <div class="card shadow mb-4">
         <div class="card-header card-sale bg-platinum">
           Platinum
@@ -105,19 +120,24 @@
               Up to <b><i>10.000</i></b> Members
             </li>
             <li><i class="fas fa-check"></i> Multiple Venues</li>
-            <li><i class="fas fa-check"></i> Custom Layouts and Design</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> Custom Layouts and Design</li>
             <li><i class="fas fa-check"></i> Free Updates</li>
-            <li><i class="fas fa-check"></i> Web version and Mini program</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> Web version and Mini program</li>
             <li><i class="fas fa-check"></i> Automatic Reports</li>
             <li><i class="fas fa-check"></i> Team Management</li>
             <li><i class="fas fa-check"></i> Full Support</li>
             <li><i class="fas fa-check"></i> SMS notifications</li>
           </ul>
-          <h6 class="price">¥8888</h6>
+          <hr>
+          <p class="old-price">¥8888</p>
+          <h6 class="price">¥6666</h6>
+          <router-link to="purchase/cart" class="btn btn-success btn-block text-white">
+            <i class="fas fa-shopping-basket"></i> Purchase
+          </router-link>
           <hr />
-          <a href="support" class="btn btn-primary btn-block text-white">
-            <i class="fa fas fa-phone"></i> CONTACT US
-          </a>
+          <router-link to="support" class="btn btn-primary btn-block text-white">
+            <i class="fas fa-phone"></i> CONTACT US
+          </router-link>
         </div>
       </div>
     </div>
@@ -129,6 +149,15 @@
   text-align: right;
   color: #d11083;
   font-size: 2em;
+}
+.old-price{
+  font-weight: bold;
+  text-align: right;
+  text-decoration: line-through;
+  color: #666;
+  font-size: 1em;
+  margin:0;
+  padding:0;
 }
 ul.features-list {
   list-style: none;
@@ -429,5 +458,12 @@ ul.features-list li {
     #ffdea1 84%,
     #736445
   );
+}
+
+.text-cutoff{
+  text-overflow: ellipsis;
+  /* Required for text-overflow to do anything */
+  white-space: nowrap;
+  overflow: hidden;
 }
 </style>

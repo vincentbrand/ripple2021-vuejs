@@ -2,6 +2,12 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+
+import './plugins/Filters'
+import './plugins/Mixins'
+// import './styles/scss/main.scss'
+// import './styles/animate.min.css'
+
 // cookie
 import cookie from 'js-cookie'
 Vue.prototype.$cookie = cookie

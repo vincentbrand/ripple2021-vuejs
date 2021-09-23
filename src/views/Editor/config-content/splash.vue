@@ -1,7 +1,8 @@
 <template>
   <div class="row" >
     <div class="col-4">
-      <div class="card shadow mb-4">
+      <div class="card mb-4">
+
         <div class="card-header py-3">
           <h6 class="m-0 font-weight-bold text-primary">Settings</h6>
         </div>
@@ -49,15 +50,19 @@
                     {{ $t("common.upload") }}
                     </div>
                 </el-upload>
+              <!--
+              <button class="btn btn-success btn-block pull-right mt-4" type="button">
+                  <i class="fas fa-save fa-sm mr-2"></i> Save Settings
+              </button>
+              -->
+          </div>
+          <!-- set logo end -->
 
-                <button
-                    class="btn btn-success btn-block pull-right mt-4"
-                    type="button"
-                >
-                    <i class="fas fa-save fa-sm mr-2"></i> Save Settings
-                </button>
-            </div>
-            <!-- set logo end -->
+
+          <button class="btn btn-success btn-block  btn-sm mt-4" type="button">
+            <i class="fas fa-save fa-sm mr-2"></i> Save Settings
+          </button>
+
         </div>
       </div>
     </div>
@@ -88,9 +93,11 @@
                 </div>
               </el-upload>
 
+              <!--
               <button class="btn btn-success btn-block mt-4" type="button">
                 <i class="fas fa-save fa-sm mr-2"></i> Save Settings
               </button>
+              -->
 
             </div>
           </div>
@@ -113,10 +120,6 @@
               <div>
                 <el-radio v-model="isGradient" :label="true" border>Use gradient colors</el-radio>
               </div>
-
-              <button class="btn btn-success btn-block mt-4" type="button">
-                <i class="fas fa-save fa-sm mr-2"></i> Save Settings
-              </button>
 
             </div>
           </div>
@@ -141,7 +144,6 @@ export default {
     uploadUri: '',
     bgc: ['#cccccc', ''],
     bgStyle: 'background-color: #cccccc',
-
     layoutList: [
         {
             text: 'Background Image with logo',

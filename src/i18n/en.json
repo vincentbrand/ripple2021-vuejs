@@ -9,7 +9,7 @@
     },
     "login": {
         "msg": "Start making waves",
-        "name": "Usernam",
+        "name": "Username",
         "password": "Password",
         "remember": "Remember password",
         "login": "SIGN IN",
@@ -33,16 +33,49 @@
         "success": "success",
         "error": "error",
         "danger": "danger",
-        "upload": "Drag the file here, or click Upload"
+        "upload": "Drag the file here, or click Upload",
+        "previous": "Previous",
+        "next": "Next",
+        "filter": "Filter"
     },
-    "navigation": {
+    "datatime": {
+        "monday":"Monday",
+        "tuesday":"Tuesday",
+        "wednesday":"Wednesday",
+        "thursday":"Thursday",
+        "friday":"Friday",
+        "saturday":"Saturday",
+        "sunday":"Sunday",
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+    },
+    "interface": {
         "navbar": {
             "search": "Search",
             "language": "Language",
+            "english": "English",
+            "chinese": "中文",
+            "dutch": "Nederlands",
+            "cart": "Cart",
+            "cartfooter": "Go to Cart",
             "alerttop": "Alerts",
             "alertfooter": "Show All Alerts",
             "messagetop": "Inbox",
             "messagefooter": "Read All Message",
+            "clientmanagement":"Clients",
+            "systemsettings":"Settings",
+            "billing":"Billing",
+            "logs":"Logs",
             "profile": "Profile",
             "settings": "Settings",
             "invoices": "Invoices",
@@ -50,49 +83,206 @@
             "logout": "Logout"
         },
         "sidemenu": {
-
+            "dashboard": "Dashboard",
+            "editor": "Editor",
+            "bookings": "Bookings",
+            "members": "Members",
+            "reports": "Reports",
+            "settings": "Settings",
+            "package": "Package",
+            "data": "Data",
+            "invoices": "Invoice",
+            "teammanagement": "Team Management",
+            "smsservice": "SMS Service",
+            "help": "Help",
+            "service": "Service",
+            "documentation": "Documentation",
+            "upgrades": "Upgrades",
+            "modules": "Modules",
+            "packages": "Packages",
+            "mini_program": "Mini Program",
+            "mp": "Mini Program",
+            "web_page": "Web Page",
+            "configuration":"Configuration",
+            "support": "Support"
         }
     },
     "pages": {
+        "dashboard":{
+            "charttitle": "Traffic",
+            "bookings": "Bookings",
+            "upcoming": "Upcoming",
+            "messages": "Messages",
+            "members": "Members",
+            "campaign": "Campaign Progress",
+            "revenue": "Revenue",
+            "signups": "Signups",
+            "traffic": "Traffic"
+        },
         "support": {
             "formTitle": "Support Form",
-            "formText":"For all support your contact details are logged,\nwe will get in touch as soon as possible.",
-            "formOptions":{
+            "formText": "For all support your contact details are logged,\nwe will get in touch as soon as possible.",
+            "formOptions": {
                 "technical": "Technical Issue",
                 "purchase": "Purchase Issue",
                 "authentication": "Authentication Issue",
                 "other": "Other Issue"
             },
             "formButton": "Report Issue",
-            "supportService":{
+            "supportService": {
                 "online": {
                     "line1": "Our support team is available",
                     "line2": "Click here to contact them"
                 },
-                "offline":{
-                    "line1": "Unfortunatly our support team is unavailable",
+                "offline": {
+                    "line1": "Unfortunately our support team is unavailable",
                     "line2": "Try again on 10:00 - 17:00 any weekday"
                 }
-            },
-            "editor":{
-                "changedState": "Your app configuration has changed, would you like to publish the new app?",
-                "tabs":{
-                    "basic": "Basic Settings",
-                    "navigation": "Navigation",
-                    "splashpage": "Splash",
-                    "news": "News",
-                    "booking": "Booking",
-                    "contact": "Contact"
-                },
-                "forms": {
-                    "layout": "Select Layout",
-                    "transition": "Transition Delay",
-                    "logo": "Set Logo",
-                    "btnSave": "Save Settings"
-                }
             }
-
+        },
+        "editor":{
+            "changedState": "Your app configuration has changed, would you like to save the new settings?",
+            "tabs":{
+                "basic": "Basic Settings",
+                "navigation": "Navigation",
+                "splashpage": "Splash",
+                "news": "News",
+                "booking": "Booking",
+                "contact": "Contact"
+            },
+            "basic": {
+                "settitle": "Set MP Title",
+                "enablemultilanguage": "Enable Multi-Language",
+                "autotranslate": "Auto-Translate",
+                "setshareimage": "Set Share Image",
+                "qrcode": "QR Code"
+            },
+            "navigation": {
+                "navstructure": "Structure",
+                "navsettings": "Content",
+                "menustyle": "Menu Style",
+                "menuoptions": {
+                    "text": "Text",
+                    "icons": "Icons",
+                    "texticon": "Text and Icons"
+                },
+                "bgcolor":"Background Color",
+                "textcolor": "Text Color"
+            },
+            "splash": {
+                "bgcolor": "Background Color",
+                "setlogo": "Set Logo"
+            },
+            "common": {
+                "layout": "Select Layout",
+                "transition": "Transition Delay",
+                "logo": "Set Logo",
+                "content": "Content",
+                "upload": "drag the file here, or click upload",
+                "settings": "Settings",
+                "btnSave": "Save Settings",
+                "preview": "Preview",
+                "pagesettings": "Page Setttings",
+                "header": "Header",
+                "subtitle": "Subtitle",
+                "txt": "Text",
+                "img": "Image"
+            }
+        },
+        "invoices": {
+            "title": "Invoices",
+            "table": {
+                "id": "ID",
+                "reference": "Reference",
+                "amount": "Amount",
+                "date": "Date",
+                "status": "Status"
+            }
+        },
+        "billing": {
+            "last10": "Last 10 Billings",
+            "date": "Date",
+            "purchased": "Purchased",
+            "amount": "Amount",
+            "status": "Status",
+            "charttitle": "Billing Chart",
+            "signups": "Signups",
+            "members": "Members",
+            "revenue": "Revenue",
+            "allbillings": "All Billings",
+            "client": "Client",
+            "user": "User"
+        },
+        "clients": {
+            "login": "Login",
+            "view": "view",
+            "remove": "Remove",
+            "notifications": {
+                "statement": "This will permanently delete this Client. Are you sure you want to continue?",
+                "confirmation": "Client Deleted",
+                "cancel": "Delete canceled"
+            },
+            "details": {
+                "details": "Details",
+                "ip": "IP",
+                "os": "OS",
+                "lastlogin": "Last Login",
+                "paying": "Paying",
+                "package": "Package",
+                "clientindicator": "Client Indicator",
+                "systemstats": "System Stats",
+                "members": "Members",
+                "bookings": "Bookings",
+                "bookings_this_week": "Weekly Bookings",
+                "logins": "Logins",
+                "revenue": "Revenue",
+                "systemindicator": "System Indicator"
+            },
+            "resetpassword": "Reset Password",
+            "delete": "Delete",
+            "loginasuser": "Login as CLIENT",
+            "logs": "Logs",
+            "date": "Date",
+            "user": "User",
+            "url": "URL",
+            "action":"Action",
+            "parameters": "Parameters"
+        },
+        "logs": {
+            "accesslog": "Access Logs",
+            "systemlog": "System Logs",
+            "date": "Date",
+            "time": "Time",
+            "client": "Client",
+            "user": "User",
+            "url": "URL",
+            "ip": "IP",
+            "os": "OS",
+            "action":"Actions",
+            "parameters": "Parameters"
+        },
+        "cart": {
+            "title": "Cart",
+            "contents": "Contents",
+            "pricing": "Pricing",
+            "subtotal": "Subtotal",
+            "total": "Total",
+            "paymentmethod": "Payment Method",
+            "period": "Period",
+            "duration": {
+                "1month": "One Month",
+                "3month": "Three Months",
+                "6month": "Six Months",
+                "12month": "One Year",
+                "24month": "Two Years",
+                "36month": "Three Years"
+            },
+            "cancel": "Cancel",
+            "purchase": "Purchase",
+            "wechatpay": "WeChat Pay",
+            "alipay": "Alipay",
+            "dearcustomer": "Dear Customer",
+            "timestatement": "All our time calculations we count one month as 31 days. This means that for every year you will get an extra week automatically added to your purchase."
         }
-
     }
 }

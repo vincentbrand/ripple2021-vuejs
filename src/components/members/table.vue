@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-xl-12 col-lg-12">
-      <div class="card shadow mb-4">
+      <div class="card mb-4">
         <div class="card-body">
           <span class="pull-left mb-3 float-left">
             <h4>Customers</h4>
@@ -42,6 +42,21 @@
             <el-table-column prop="wallet" label="Wallet"> </el-table-column>
 
             <el-table-column label="Actions" width="120">
+
+              <router-link class="btn btn-sm btn-info text-white">
+                <i class="fas fa-sign-in-alt fa-sm fa-fw mr-1"></i>
+                Login
+              </router-link>
+              <router-link class="btn btn-sm btn-warning text-white mx-1">
+                <i class="fas fa-pencil-alt fa-sm fa-fw mr-1"></i>
+                View
+              </router-link>
+              <router-link class="btn btn-sm btn-danger text-white">
+                <i class="fas fa-trash-alt fa-sm fa-fw mr-1"></i>
+                Remove
+              </router-link>
+
+              <!--
               <router-link to="/" class="text-success">
                 <i class="fas fa-plus"></i>
               </router-link>
@@ -51,6 +66,7 @@
               <router-link to="" class="text-warning">
                 <i class="far fa-edit"></i>
               </router-link>
+              -->
             </el-table-column>
           </el-table>
 

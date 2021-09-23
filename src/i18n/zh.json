@@ -24,7 +24,7 @@
     "common": {
         "loading": "加载中",
         "notfound": "页面没有找到",
-        "errhint": "看起来你在系统里发现了一个漏洞…",
+        "errhint": "看起来你在系统里发现了一个漏洞",
         "errback": "回到首页",
         "ok": "确定",
         "cancel": "取消",
@@ -33,6 +33,220 @@
         "success": "成功",
         "error": "失败",
         "danger": "危险",
-        "upload": "将文件拖到此处，或点击上传"
+        "upload": "将文件拖到此处，或点击上传",
+        "previous": "先前",
+        "next": "下一步",
+        "filter": "过滤器"
+    },
+    "datatime": {
+        "monday":"Monday",
+        "tuesday":"Tuesday",
+        "wednesday":"Wednesday",
+        "thursday":"Thursday",
+        "friday":"Friday",
+        "saturday":"Saturday",
+        "sunday":"Sunday",
+        "january": "January",
+        "february": "February",
+        "march": "March",
+        "april": "April",
+        "may": "May",
+        "june": "June",
+        "july": "July",
+        "august": "August",
+        "september": "September",
+        "october": "October",
+        "november": "November",
+        "december": "December"
+    },
+    "interface": {
+        "navbar": {
+            "search": "搜索",
+            "language": "语言",
+            "alerttop": "警觉",
+            "alertfooter": "显示所有警报”",
+            "messagetop": "收件箱",
+            "messagefooter": "读取所有消息",
+            "clientmanagement":"客户",
+            "systemsettings":"设置",
+            "billing":"账单",
+            "logs":"日志",
+            "profile": "配置文件",
+            "settings": "设置",
+            "invoices": "发票",
+            "activity": "活动日志",
+            "logout": "注销"
+        },
+        "sidemenu": {
+            "dashboard": "仪表板",
+            "editor": "编辑",
+            "bookings": "预订",
+            "members": "成员",
+            "reports": "报告",
+            "settings": "设置",
+            "package": "包",
+            "invoices": "发票",
+            "teammanagement": "团队管理",
+            "smsservice": "短信服务",
+            "help": "帮助",
+            "data": "数据",
+            "service": "服务",
+            "documentation": "文件",
+            "upgrades": "升级",
+            "modules": "模块",
+            "packages": "包",
+
+            "mini_program": "微型程序",
+            "mp": "微型程序",
+            "web_page": "网页",
+            "configuration":"配置",
+            "support": "支持"
+        }
+    },
+    "pages": {
+        "dashboard": {
+            "charttitle": "统计数据",
+            "bookings": "预订",
+            "upcoming": "即将到来",
+            "messages": "消息",
+            "members": "成员",
+            "campaign": "活动目标进度",
+            "revenue": "收入",
+            "signups": "注册",
+            "traffic": "交通"
+        },
+        "support": {
+            "formTitle": "Support Form",
+            "formText": "For all support your contact details are logged,\nwe will get in touch as soon as possible.",
+            "formOptions": {
+                "technical": "Technical Issue",
+                "purchase": "Purchase Issue",
+                "authentication": "Authentication Issue",
+                "other": "Other Issue"
+            },
+            "formButton": "Report Issue",
+            "supportService": {
+                "online": {
+                    "line1": "Our support team is available",
+                    "line2": "Click here to contact them"
+                },
+                "offline": {
+                    "line1": "Unfortunately our support team is unavailable",
+                    "line2": "Try again on 10:00 - 17:00 any weekday"
+                }
+            }
+        },
+        "editor": {
+            "changedState": "Your app configuration has changed, would you like to publish the new app?",
+            "tabs": {
+                "basic": "Basic Settings",
+                "navigation": "Navigation",
+                "splashpage": "Splash",
+                "news": "News",
+                "booking": "Booking",
+                "contact": "Contact"
+            },
+            "forms": {
+                "layout": "Select Layout",
+                "transition": "Transition Delay",
+                "logo": "Set Logo",
+                "btnSave": "Save Settings"
+            }
+        },
+        "invoices": {
+            "title": "发票",
+            "table": {
+                "id": "ID",
+                "reference": "参考",
+                "amount": "金额",
+                "date": "日期",
+                "status": "状态"
+            }
+        },
+        "billing": {
+            "last10": "最后10个账单",
+            "date": "日期",
+            "purchased": "购买",
+            "amount": "数量",
+            "status": "状态",
+            "charttitle": "账单表",
+            "signups": "报名",
+            "members": "成员",
+            "revenue": "收入",
+            "allbillings": "所有账单",
+            "client": "客户",
+            "user": "用户"
+        },
+        "clients": {
+            "login": "登录",
+            "view": "视图",
+            "remove": "删除",
+            "notifications": {
+                "statement": "“这将永久删除此客户端。确实要继续吗？",
+                "confirmation": "客户端已删除",
+                "cancel": "删除已取消"
+            },
+            "details": {
+                "details": "详情",
+                "ip": "IP",
+                "os": "操作系统",
+                "lastlogin": "上次登录",
+                "paying": "支付",
+                "package": "包",
+                "clientindicator": "客户端指示器",
+                "systemstats": "系统统计数据",
+                "members": "成员",
+                "bookings": "预订",
+                "bookings_this_week": "本周预订",
+                "logins": "登录",
+                "revenue": "收入",
+                "systemindicator": "系统指示器"
+            },
+            "resetpassword": "重置密码",
+            "delete": "删除",
+            "loginasuser": "作为客户端登录",
+            "logs": "日志",
+            "date": "日期",
+            "user": "用户",
+            "url": "URL",
+            "action":"行动",
+            "parameters": "参数"
+        },
+        "logs": {
+            "accesslog": "访问日志",
+            "systemlog": "系统日志",
+            "date": "日期",
+            "time": "时间",
+            "client": "客户",
+            "user": "用户",
+            "url": "URL",
+            "ip": "IP",
+            "os": "操作系统",
+            "action":"行动",
+            "parameters": "参数"
+        },
+        "cart": {
+            "title": "购物篮",
+            "contents": "内容",
+            "pricing": "定价",
+            "subtotal": "小计",
+            "total": "总计",
+            "paymentmethod": "付款方式",
+            "period": "期间",
+            "duration": {
+                "1month": "一个月",
+                "3month": "三个月",
+                "6month": "六个月",
+                "12month": "一年",
+                "24month": "两年",
+                "36month": "三年"
+            },
+            "cancel": "取消",
+            "purchase": "购买",
+            "wechatpay": "微信支付",
+            "alipay": "支付宝",
+            "dearcustomer": "亲爱的客户",
+            "timestatement": "我们所有的时间计算，我们计算一个月为31天。这意味着每年你都会有一周的额外时间自动添加到你的购买中。"
+        }
     }
 }

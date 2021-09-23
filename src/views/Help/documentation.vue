@@ -2,7 +2,7 @@
 <div class="row">
 
     <div class="col-xl-4 col-lg-4">
-        <div class="card shadow mb-4">
+        <div class="card mb-4">
             <div class="card-body">
                 <h5 class="text-primary">Support</h5>
                 <p>Ripple aims to give the best technical support and guarantees possible. Besides regular maintenance and security checks we try to make sure that the system is online 99.9% of the time.</p>
@@ -13,7 +13,7 @@
     </div>
 
     <div class="col-xl-4 col-lg-4">
-        <div class="card shadow mb-4">
+        <div class="card mb-4">
             <div class="card-body">
                 <div class="py-2">
                     <h6>Support Form</h6>

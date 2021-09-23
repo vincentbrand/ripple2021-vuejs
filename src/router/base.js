@@ -1,16 +1,18 @@
 export const allSidebarRouter = [
+    /*
     {
         path: '/',
-        name: 'Dashboard',
+        name: 'dashboard',
         component: () => import('@/views/home.vue'),
         icon: 'fa-home'
     },
+    */
     {
-        name: 'Mini Program'
+        name: 'mini_program'
     },
     {
         path: '/emulator/splash',
-        name: 'Editeor',
+        name: 'editor',
         component: () => import('@/views/Editor'),
         icon: 'fa-edit'
     },
@@ -66,32 +68,73 @@ export const allSidebarRouter = [
     },
     */
     {
-        name: 'analytics'
+        name: 'data'
     },
     {   
-        path: '/bookings',
-        name: 'Bookings',
+        path: '/bookings/overview',
+        name: 'bookings',
         component: () => import('@/views/Bookings'),
         icon: 'fa-calendar-alt'
     },
     {   
         path: '/members',
-        name: 'Members',
+        name: 'members',
         component: () => import('@/views/Members'),
         icon: 'fa-users'
     },
-    {   
+    {
         path: '/reports',
-        name: 'Reports',
+        name: 'reports',
         component: () => import('@/views/Reports'),
         icon: 'fa-file-alt'
     },
     {
-        name: 'Setting'
+        name: 'configuration'
     },
+    {
+        path: '/settings',
+        name: 'settings',
+        icon: 'fa-toolbox',
+        component: () => import('@/views/common'),
+    },
+
+    // children routes
+
+    {
+        path: '/settings/system',
+        name: 'System',
+        icon: 'fa-database',
+        component: () => import('@/views/Settings/system')
+    },
+    {
+        path: '/settings/package',
+        name: 'Package',
+        icon: 'fa-cube',
+        component: () => import('@/views/Settings/package')
+    },
+    {
+        path: '/settings/invoices',
+        name: 'Invoices',
+        icon: 'fa-file-invoice-dollar',
+        component: () => import('@/views/Settings/invoices')
+    },
+    {
+        path: '/settings/team',
+        name: 'Team Management',
+        icon: 'fa-users',
+        component: () => import('@/views/Settings/teamManagement')
+    },
+    {
+        path: '/settings/sms',
+        name: 'SMS service',
+        icon: 'fa-users',
+        component: () => import('@/views/Settings/service')
+    },
+
+    /*
     {   
         path: '/settings',
-        name: 'Settings',
+        name: 'settings',
         icon: 'fa-toolbox',
         component: () => import('@/views/common'),
         children: [
@@ -127,24 +170,25 @@ export const allSidebarRouter = [
             },
         ]
     },
+    */
     {
-        name: 'SUPPORT'
+        name: 'support'
     },
     {   
         path: '/help',
-        name: 'Help',
+        name: 'help',
         component: () => import('@/views/common'),
         icon: 'fa-question-circle',
         children: [
             {   
                 path: 'service/pages',
-                name: 'Service',
+                name: 'service',
                 icon: 'fa-book',
                 component: () => import('@/views/Help/service'),
             },
             {
                 path: 'document',
-                name: 'Documentation',
+                name: 'documentation',
                 icon: 'fa-headset',
                 component: () => import('@/views/Help/documentation')
             }
@@ -152,19 +196,19 @@ export const allSidebarRouter = [
     },
     {
         path: '/upgrades',
-        name: 'Upgrades',
+        name: 'upgrades',
         component: () => import('@/views/common'),
         icon: 'fa-yen-sign',
         children: [
             {
                 path: 'index',
-                name: 'Modules',
+                name: 'modules',
                 icon: 'fa-cubes',
                 component: () => import('@/views/Upgrades/modules')
             },
             {
                 path: 'packages',
-                name: 'Packages',
+                name: 'packages',
                 icon: 'fa-cube',
                 component: () => import('@/views/Upgrades/packages')
             }
