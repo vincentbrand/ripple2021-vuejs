@@ -25,11 +25,21 @@
           <hr>
           <p class="old-price">¥1288</p>
           <h6 class="price">¥888</h6>
-          <router-link to="purchase/cart" class="btn btn-success btn-block text-white">
-            <i class="fas fa-shopping-basket"></i> Purchase
-          </router-link>
+          <hr>
+          <div class="row">
+            <div class="col-7">
+              <router-link to="/purchase/cart" class="btn btn-info btn-block btn-sm text-white">
+                <i class="fas fa-shopping-basket"></i> Add <span class="hide-on-mobile">to Basket</span>
+              </router-link>
+            </div>
+            <div class="col-5">
+              <router-link to="/purchase/cart" class="btn btn-success btn-block btn-sm text-white">
+                <i class="fas fa-shopping-basket"></i> Buy
+              </router-link>
+            </div>
+          </div>
           <hr />
-          <router-link to="support" class="btn btn-primary btn-block text-white">
+          <router-link to="support" class="btn btn-primary btn-block btn-sm text-white">
             <i class="fas fa-phone"></i> CONTACT US
           </router-link>
         </div>
@@ -61,11 +71,21 @@
           <hr>
           <p class="old-price">¥2588</p>
           <h6 class="price">¥1888</h6>
-          <router-link to="purchase/cart" class="btn btn-success btn-block text-white">
-            <i class="fas fa-shopping-basket"></i> Purchase
-          </router-link>
+          <hr>
+          <div class="row">
+            <div class="col-7">
+              <router-link to="/purchase/cart" class="btn btn-info btn-block btn-sm text-white">
+                <i class="fas fa-shopping-basket"></i> Add <span class="hide-on-mobile">to Basket</span>
+              </router-link>
+            </div>
+            <div class="col-5">
+              <router-link to="/purchase/cart" class="btn btn-success btn-block btn-sm text-white">
+                <i class="fas fa-shopping-basket"></i> Buy
+              </router-link>
+            </div>
+          </div>
           <hr />
-          <router-link to="support" class="btn btn-primary btn-block text-white">
+          <router-link to="support" class="btn btn-primary btn-block btn-sm text-white">
             <i class="fas fa-phone"></i> CONTACT US
           </router-link>
         </div>
@@ -97,11 +117,21 @@
           <hr>
           <p class="old-price">¥3788</p>
           <h6 class="price">¥2888</h6>
-          <router-link to="purchase/cart" class="btn btn-success btn-block text-white">
-            <i class="fas fa-shopping-basket"></i> Purchase
-          </router-link>
+          <hr>
+          <div class="row">
+            <div class="col-7">
+              <router-link to="/purchase/cart" class="btn btn-info btn-block btn-sm text-white">
+                <i class="fas fa-shopping-basket"></i> Add  <span class="hide-on-mobile">to Basket</span>
+              </router-link>
+            </div>
+            <div class="col-5">
+              <router-link to="/purchase/cart" class="btn btn-success btn-block btn-sm text-white">
+                <i class="fas fa-shopping-basket"></i> Buy
+              </router-link>
+            </div>
+          </div>
           <hr />
-          <router-link to="support" class="btn btn-primary btn-block text-white">
+          <router-link to="support" class="btn btn-primary btn-block btn-sm text-white">
             <i class="fas fa-phone"></i> CONTACT US
           </router-link>
         </div>
@@ -131,11 +161,21 @@
           <hr>
           <p class="old-price">¥8888</p>
           <h6 class="price">¥6666</h6>
-          <router-link to="purchase/cart" class="btn btn-success btn-block text-white">
-            <i class="fas fa-shopping-basket"></i> Purchase
-          </router-link>
+          <hr>
+          <div class="row">
+            <div class="col-7">
+              <router-link to="/purchase/cart" class="btn btn-info btn-block btn-sm text-white">
+                <i class="fas fa-shopping-basket"></i> Add <span class="hide-on-mobile">to Basket</span>
+              </router-link>
+            </div>
+            <div class="col-5">
+              <router-link to="/purchase/cart" class="btn btn-success btn-block btn-sm text-white">
+                <i class="fas fa-shopping-basket"></i> Buy
+              </router-link>
+            </div>
+          </div>
           <hr />
-          <router-link to="support" class="btn btn-primary btn-block text-white">
+          <router-link to="support" class="btn btn-primary btn-block btn-sm text-white">
             <i class="fas fa-phone"></i> CONTACT US
           </router-link>
         </div>
