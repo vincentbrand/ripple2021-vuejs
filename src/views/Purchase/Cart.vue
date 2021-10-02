@@ -24,12 +24,13 @@
               </div>
               <div class="col-3 py-4">
                 <p class="timelabel">period</p>
-                <el-select v-model="item.duration" style="width: 100%;">
+                <el-select v-model="item.duration" style="width: 100%;" @change="calculateCart">
                   <el-option
                       v-for="(p,index) in item.purchase"
                       :key="index"
                       :value="p.duration"
                       :label="$t('pages.cart.duration.'+p.label)"
+
                   >
                   </el-option>
                 </el-select>
@@ -65,21 +66,23 @@
               </li>
               <li class="subtotal">
                 <p class="title">{{ $t('pages.cart.subtotal') }}</p>
-                <p class="amount">calculate</p>
+                <p class="amount">{{ cart.subtotal }}</p>
               </li>
+              <!--
               <li class="discount">
                 <p class="title">New Member Discount</p>
                 <p class="amount">20%</p>
               </li>
+              -->
+              <!--
               <li class="newprice">
                 <p class="title">{{ $t('pages.cart.total') }}</p>
-                <p class="amount">3221</p>
+                <p class="amount">{{ cart.total }}</p>
               </li>
+              -->
             </ul>
 
-
-            <hr>
-            <h5 class="grand-total text-right">3221</h5>
+            <h5 class="grand-total text-right">{{ cart.total }}</h5>
             <hr>
             <h6>{{ $t('pages.cart.paymentmethod') }}</h6>
             <hr>
@@ -116,7 +119,8 @@
             </div>
             <div class="modal-body">
               <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 text-center">
+                  <h5>{{ cart.total }}</h5>
                   <p>Please Scan the QR code to finish payment</p>
                   <img :src="base64" class="img-fluid qr-example"/>
                 </div>
@@ -150,6 +154,7 @@ export default {
     cart:{
       // computed items
       subtotal: 0,
+      total: 0,
       products:[{
         id: 1,
         title: '',
@@ -178,18 +183,22 @@ export default {
       });
       return result;
     },
-    calculatePrices(){
-      let subtotal = 0;
-      let total = 0;
-      this.cart.products.forEach(element => {
-        console.log(element.duration);
-        // get each price based on duration
-      });
-      this.subtotal = subtotal;
-      this.total = total;
-    },
     cancelCart(){
       console.log('cancel cart');
+    },
+    calculateCart(){
+      this.cart.subtotal = 0;
+      this.cart.total = 0;
+      this.cart.products.forEach((product, index) => {
+        this.cart.products[index].purchase.forEach((prices, i) => {
+          if(this.cart.products[index].purchase[i].duration == product.duration){
+            // console.log( this.cart.products[index].purchase[i].price );
+            this.cart.subtotal += this.cart.products[index].purchase[i].price;
+          }
+        });
+      });
+      // calculate discount
+      this.cart.total = this.cart.subtotal;
     },
     purchaseCart(){
       this.isModal = true;
@@ -238,6 +247,9 @@ export default {
       })
     }
     console.log(this.cart.products);
+
+    // calculate cart on start
+    this.calculateCart();
   },
 
   mounted(){
@@ -269,6 +281,16 @@ li{
         font-weight: bold;
         color:#666;
       }
+    }
+  }
+  &.subtotal{
+    margin: 10px 0;
+    padding: 10px 0 10px 0;
+    border-top:1px dashed #ccc;
+    border-bottom:1px dashed #ccc;
+    p {
+      margin: 0;
+      padding: 0;
     }
   }
   &.discount{

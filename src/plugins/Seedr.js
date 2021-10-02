@@ -43,7 +43,7 @@ const Seedr = {
     int:function(i){
         return Math.floor(Math.random() * i);
     },
-    range:function(min,max) {
+    range:function(min=0,max=100) {
         min = Math.ceil(min);
         max = Math.floor(max);
         return Math.floor(Math.random() * (max - min + 1) + min);
@@ -74,6 +74,54 @@ const Seedr = {
     // chinese mobile phone number
     phone:function(){
         return (Math.random() * (19999999999 - 10000000000) + 10000000000).toFixed();
+    },
+
+    // collection function to generate dummy objects
+    createObject:function(inputArray = []){
+        var obj = {};
+        inputArray.forEach(element => {
+            if(element.type == 'word'){
+                obj[element.name] = this.word();
+            }else if(element.type == 'words'){
+                obj[element.name] = this.words();
+            }else if(element.type == 'dateTime'){
+                obj[element.name] = this.dateTime(element.params.start, element.params.end);
+            }else if(element.type == 'phone'){
+                obj[element.name] = this.phone();
+            }else if(element.type == 'ip'){
+                obj[element.name] = this.ip();
+            }else if(element.type == 'email'){
+                obj[element.name] = this.email();
+            }else if(element.type == 'text'){
+                obj[element.name] = this.text();
+            }else if(element.type == 'id'){
+                obj[element.name] = this.id();
+            }else if(element.type == 'firstname'){
+                obj[element.name] = this.firstname();
+            }else if(element.type == 'lastname'){
+                obj[element.name] = this.lastname();
+            }else if(element.type == 'fulname') {
+                obj[element.name] = this.fullname();
+            }else if(element.type == 'int'){
+                obj[element.name] = this.int();
+            }else if(element.type == 'range'){
+                obj[element.name] = this.range();
+            }else{
+                // do nothing; type not specified not specified
+                    console.log('Seedr->createObject : Warning, element.type not found');
+            }
+        });
+        // return object
+        return obj;
+    },
+
+    // collection function to generate dummy objects
+    createData: function(amount = 1, inputArray = []) {
+        var results = [];
+        for (let i = 0; i < amount; i++) {
+            results.push(this.createObject(inputArray))
+        }
+        return results;
     }
 
 }

@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-
-import UserModule from './modules/user/store'
-
+import HomeModule from './home.module';
+import EmulatorModule from './emulator.module';
+import BookingsModule from './bookings.module';
 
 Vue.use(Vuex)
 
-export default  new Vuex.Store({
+export default new Vuex.Store({
   state: {
     config: {
       tabbar: {
@@ -59,18 +59,8 @@ export default  new Vuex.Store({
   },
   modules: {
     namespaced: true,
-    UserModule,
+    HomeModule,
+    EmulatorModule,
+    BookingsModule,
   }
-  /*
-  ,
-  plugins: [plugin , createPersistedState({
-    key: 'ripple_presence_storage',
-    storage: {
-      getItem: (key) => ls.get(key),
-      setItem: (key, value) => ls.set(key, value),
-      removeItem: (key) => ls.remove(key),
-    },
-  })]
-  */
 })
-

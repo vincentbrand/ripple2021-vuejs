@@ -37,7 +37,7 @@ export default {
     data: () => ({
         bgStyle: '',
         newsDataSource: [],
-        RouterIncludes: ['/emulator/splash', '/emulator/navigation', '/emulator/setting']
+        RouterIncludes: ['/editor/splash', '/editor/navigation', '/editor/setting']
     }),
 
     props: [

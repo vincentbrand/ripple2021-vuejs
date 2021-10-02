@@ -113,7 +113,7 @@
 
             <!-- ShoppingCart -->
             <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="admin-menu-1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="admin-menu-2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-shopping-basket fa-fw"></i>
                 <span class="badge badge-danger badge-counter" v-if="cart.length > 0">{{ cart.length}}</span>
               </a>
@@ -121,15 +121,20 @@
                 <h6 class="dropdown-header">
                   {{ $t('interface.navbar.cart') }}
                 </h6>
-                <a class="dropdown-item d-flex align-items-center" href=""  v-for="(item, index) in cart.products" :key="index" @click="goToProduct(item.id)">
-                  <div class="dropdown-list-image mr-3">
-                    <img class="img-fluid" :src="item.image" alt="">
-                  </div>
-                  <div class="font-weight-bold">
-                    <div class="text-truncate">{{ item.title }}</div>
-                    <div class="small text-gray-500">{{ item.description }}</div>
-                  </div>
-                </a>
+                <div v-if="cart.products > 0">
+                  <a class="dropdown-item d-flex align-items-center" href=""  v-for="(item, index) in cart.products" :key="index" @click="goToProduct(item.id)">
+                    <div class="dropdown-list-image mr-3">
+                      <img class="img-fluid" :src="item.image" alt="">
+                    </div>
+                    <div class="font-weight-bold">
+                      <div class="text-truncate">{{ item.title }}</div>
+                      <div class="small text-gray-500">{{ item.description }}</div>
+                    </div>
+                  </a>
+                </div>
+                <div v-else class="text-center">
+                  <p class="my-5 text-gray-500">{{ $t('interface.navbar.cart_empty') }}</p>
+                </div>
                 <router-link
                     to="/purchase/cart"
                     tag='button'
@@ -151,17 +156,26 @@
 							</a>
 							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
 								<h6 class="dropdown-header">{{ $t('interface.navbar.alerttop') }}</h6>
-                <a class="dropdown-item d-flex align-items-center" href="" v-for="(item, index) in alerts" :key="index" @click="goToAlert(item.id)">
-                  <div class="mr-3">
-                    <div class="icon-circle bg-primary" v-bind:class="{ 'bg- ':item.style }">
-                      <i class="fas fa-file-alt text-white" v-bind:class="{ 'fas ':item.icon }"></i>
+                <div v-if="alerts.length > 0">
+                  <a class="dropdown-item d-flex align-items-center"
+                     href=""
+                     v-for="(item, index) in alerts"
+                     :key="index"
+                     @click="goToAlert(item.id)">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-primary" v-bind:class="{ 'bg- ':item.style }">
+                        <i class="fas fa-file-alt text-white" v-bind:class="{ 'fas ':item.icon }"></i>
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <div class="small text-gray-500">{{ item.date }}</div>
-                    <span class="font-weight-bold">{{ item.text }}</span>
-                  </div>
-                </a>
+                    <div>
+                      <div class="small text-gray-500">{{ item.date }}</div>
+                      <span class="font-weight-bold">{{ item.text }}</span>
+                    </div>
+                  </a>
+                </div>
+                <div v-else class="text-center">
+                  <p class="my-5 text-gray-500">{{ $t('interface.navbar.alert_empty') }}</p>
+                </div>
                 <router-link
                     to="/user/alerts"
                     tag='button'
@@ -266,6 +280,7 @@
 
 <script>
 import moment from "moment";
+import Axios from "axios";
 
 import LocaleSwitch from "@/components/app/LocaleSwitch.vue";
 
@@ -287,6 +302,7 @@ export default {
 
       cart:{
           id:'ab218fc6e2cb6302c079d770d60893a1', // localStorage
+          /*
           products:[{
             id:1,
             title:'Test',
@@ -295,24 +311,12 @@ export default {
             amount:1,
             price:188
           }]
+          */
+        products:[]
       },
 
       avatar: "../assets/img/profile.png",
-      alerts:[
-        {
-          id:1,
-          style: "warning",
-          icon: "fa-exclamation-triangle",
-          date: moment().format('Y-m-d hh:mm'),
-          text: "Spending Alert: We've noticed unusually high spending for your account"
-        },{
-          id:2,
-          style: "warning",
-          icon: "fa-exclamation-triangle",
-          date: moment().format('Y-m-d hh:mm'),
-          text: "Spending Alert: We've noticed unusually high spending for your account"
-        },
-      ],
+      alerts:[],
       messages:[
         {
           id:1,
@@ -338,9 +342,16 @@ export default {
         }
       ]
     }
-
-
   },
+
+  computed: {
+    /*
+    userAlerts(){
+      return this.$store.state.userAlerts
+    }
+    */
+  },
+
   methods: {
     // language switcher
     tabEN() {
@@ -358,16 +369,37 @@ export default {
     goToAlert(alertid) {
       this.$router.push({ name: 'alertmessage', params: { id: alertid } })
     },
-    goToMessage(messageid) {
-      this.$router.push({ name: 'message', params: { id: messageid } })
+    goToProduct(productid) {
+      console.log(productid);
+      this.$router.push({ name: 'cart'})
+    },
+
+    getAlerts(){
+      Axios.get('http://ripple.local/api/V1/alerts')
+        .then(function (response) {
+          console.log(response.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    },
+
+    promiseAlerts(){
+
     }
   },
 
 
 
-  create(){
-    this.alerts.splice(Math.floor(Math.random()*this.alerts.length), 1);
-    this.messages.splice(Math.floor(Math.random()*this.messages.length), 1);
+  created(){
+    // this.alerts.splice(Math.floor(Math.random()*this.alerts.length), 1);
+    // this.messages.splice(Math.floor(Math.random()*this.messages.length), 1);
+
+    console.log('NAVBAR');
+    //this.alerts = this.getAlerts();
+
+
+
   }
 
 

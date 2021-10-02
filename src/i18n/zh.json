@@ -247,6 +247,26 @@
             "alipay": "支付宝",
             "dearcustomer": "亲爱的客户",
             "timestatement": "我们所有的时间计算，我们计算一个月为31天。这意味着每年你都会有一周的额外时间自动添加到你的购买中。"
+        },
+        "packages": {
+            "bronze": "青铜",
+            "silver": "银",
+            "gold": "金",
+            "platinum": "铂金",
+            "bookingperday": "每天<b><i>{0}</i></b>次预订",
+            "unlimitedbookingperday": "无限预订",
+            "members": "最多<b><i>{0}</i></b>名成员",
+            "venues": "多场地",
+            "layouts": "多布局",
+            "updates": "免费更新",
+            "webversions": "网络版和小程序",
+            "reports": "自动报告",
+            "team": "团队管理",
+            "fullsupport":"全力支持",
+            "sms":"短信通知",
+            "add": "添加",
+            "buy": "购买",
+            "contact": "联系我们"
         }
     }
 }

@@ -1,33 +1,35 @@
 <template>
   <div class="row">
     <div class="col-md-12">
-      <div class="mb-4">
-        <span class="pull-left mb-3 float-left">
-          <h4>{{ $t('pages.logs.'+page.title) }}</h4>
-        </span>
-        <button class="btn btn-primary btn-xs pull-right mb-3 mx-3 float-right" type="button">
-          <i class="fas fa-filter fa-sm"></i> Filter
-        </button>
-        <el-table
-            :data="dataSource"
-            style="width: 100%"
-        >
-          <el-table-column prop="date" :label="$t('pages.logs.date')">
-          </el-table-column>
-          <el-table-column :label="$t('pages.logs.client')" width="180">
-            <template slot-scope="{ row }">
-              <span style="margin-left: 10px">{{ row.client }}</span>
-            </template>
-          </el-table-column>
-          <el-table-column prop="user" :label="$t('pages.logs.user')">
-          </el-table-column>
-          <el-table-column prop="url" :label="$t('pages.logs.url')">
-          </el-table-column>
-          <el-table-column prop="action" :label="$t('pages.logs.action')">
-          </el-table-column>
-          <el-table-column prop="parameters" :label="$t('pages.logs.parameters')">
-          </el-table-column>
-        </el-table>
+      <div class="card mb-4">
+        <div class="card-body">
+          <span class="pull-left mb-3 float-left">
+            <h4>{{ $t('pages.logs.'+page.title) }}</h4>
+          </span>
+          <button class="btn btn-primary btn-sm pull-right mb-3 mx-3 float-right" type="button">
+            <i class="fas fa-filter fa-sm"></i> <span class="hide-on-mobile ml-1">Filter</span>
+          </button>
+          <el-table
+              :data="dataSource"
+              style="width: 100%"
+          >
+            <el-table-column prop="date" :label="$t('pages.logs.date')">
+            </el-table-column>
+            <el-table-column :label="$t('pages.logs.client')" width="180">
+              <template slot-scope="{ row }">
+                <span style="margin-left: 10px">{{ row.client }}</span>
+              </template>
+            </el-table-column>
+            <el-table-column prop="user" :label="$t('pages.logs.user')">
+            </el-table-column>
+            <el-table-column prop="url" :label="$t('pages.logs.url')">
+            </el-table-column>
+            <el-table-column prop="action" :label="$t('pages.logs.action')">
+            </el-table-column>
+            <el-table-column prop="parameters" :label="$t('pages.logs.parameters')">
+            </el-table-column>
+          </el-table>
+        </div>
       </div>
     </div>
   </div>

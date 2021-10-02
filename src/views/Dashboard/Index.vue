@@ -99,14 +99,14 @@
         <div class="card mb-4">
           <div class="card-body">
             <span class="pull-left mb-3 float-left">
-              <h4>Today's Bookings</h4>
+              <h4>{{ $t('pages.dashboard.todaysbookings')}}</h4>
             </span>
             <router-link
                 to="/bookings/new"
                 tag='button'
                 class="btn btn-primary btn-sm pull-right mb-3 float-right"
             >
-              <i class="fas fa-plus-circle"></i> New Booking
+              <i class="fas fa-plus-circle"></i> {{ $t('common.newbooking')}}
             </router-link>
             <!--
             <button class="btn btn-primary btn-sm pull-right mb-3 mx-3 float-right" type="button">
@@ -127,7 +127,7 @@
               </el-table-column>
               <el-table-column label="Contact" width="140px">
                 <button class="btn btn-success btn-call btn-xs text-white" @click="contactCustomer()">
-                  <i class="fas fa-phone fa-xs mr-1"></i> Contact
+                  <i class="fas fa-phone fa-xs mr-1"></i> {{ $t('common.contact')}}
                 </button>
               </el-table-column>
 
@@ -135,11 +135,11 @@
               </el-table-column>
 
               <el-table-column label="" width=''>
-                <button class="btn btn-sm btn-info text-white mx-1" @click="changeBooking(1)">
-                  <i class="far fa-edit"></i> <span class="hide-on-mobile">Change Booking</span>
+                <button class="btn btn-sm btn-info text-white mx-1 my-1" @click="changeBooking(1)">
+                  <i class="far fa-edit"></i> <span class="hide-on-mobile">{{ $t('common.edit')}}</span>
                 </button>
-                <button class="btn btn-sm btn-danger text-white mx-1" @click="cancelBooking(1)">
-                  <i class="fas fa-trash-alt"></i> <span class="hide-on-mobile">Cancel Booking</span>
+                <button class="btn btn-sm btn-danger text-white mx-1 my-1" @click="cancelBooking(1)">
+                  <i class="fas fa-trash-alt"></i> <span class="hide-on-mobile">{{ $t('common.cancel')}}</span>
                 </button>
               </el-table-column>
             </el-table>

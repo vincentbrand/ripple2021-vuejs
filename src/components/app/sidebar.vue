@@ -186,7 +186,7 @@ export default {
             },
             {
               id: 3,
-              path: '/webpage',
+              path: '/web/editor',
               name: 'web_page',
               icon: 'fa-globe-asia',
               children: true
@@ -197,7 +197,7 @@ export default {
             },
             {
               id: 3,
-              path: '/emulator/splash',
+              path: '/mpeditor/setting',
               name: 'editor',
               icon: 'fa-mobile-alt',
               children: true

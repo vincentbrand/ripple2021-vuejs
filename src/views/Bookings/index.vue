@@ -79,10 +79,10 @@
 
               <el-table-column label="Actions" width="">
                 <button class="btn btn-sm btn-info text-white mx-1" @click="changeBooking(1)">
-                  <i class="far fa-edit"></i> <span class="hide-on-mobile">Change Booking</span>
+                  <i class="far fa-edit"></i> <span class="hide-on-mobile">Change</span>
                 </button>
                 <button class="btn btn-sm btn-danger text-white mx-1" @click="cancelBooking(1)">
-                  <i class="fas fa-trash-alt"></i> <span class="hide-on-mobile">Cancel Booking</span>
+                  <i class="fas fa-trash-alt"></i> <span class="hide-on-mobile">Cancel</span>
                 </button>
               </el-table-column>
 

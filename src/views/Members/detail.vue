@@ -1,7 +1,58 @@
 <template>
   <div>
 
-    <h1>Member detail page</h1>
+    <h5>Member detail page</h5>
+
+    <div class="row">
+      <div class="col-3">
+        <div class="card">
+          <div class="card-body">
+            <img class="img-fluid rounded-circle" src="https://source.unsplash.com/random/300x300"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-9">
+        <div class="card">
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-borderless table-member-profile">
+                <tr>
+                  <td>Name</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Age</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Gender</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>City</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Points</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Wallet</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>Last Reservation</td>
+                  <td></td>
+                </tr>
+              </table>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12"></div>
+    </div>
 
   </div>
 </template>
@@ -28,3 +79,16 @@ export default {
     }
 }
 </script>
+
+
+<style lang="scss" scoped>
+.table-member-profile{
+  tr{
+    td{
+      &:first-child{
+        font-weight: bold;
+      }
+    }
+  }
+}
+</style>

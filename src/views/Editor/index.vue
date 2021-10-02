@@ -27,12 +27,12 @@
       <!-- nav-pills -->
       <ul class="nav nav-pills mb-3">
         <li class="nav-item-gary">
-          <router-link to="/emulator/setting" class="nav-link" tag="button"
+          <router-link to="/mpeditor/setting" class="nav-link" tag="button"
             >Basic Settings</router-link
           >
         </li>
         <li class="nav-item-gary">
-          <router-link to="/emulator/navigation" class="nav-link" tag="button"
+          <router-link to="/mpeditor/navigation" class="nav-link" tag="button"
             >Navigation</router-link
           >
         </li>
@@ -50,12 +50,16 @@
         -->
 
         <li
-            v-for="(item, index) in mp.navigation"
+            v-for="(item, index) in mp.pages"
             :class="$route.path.includes(item.type) ? 'nav-item active' : 'nav-item'"
             :key="index"
         >
-          <router-link :to="'/emulator/' + item.type" class="nav-link" tag="button"
-          >{{ item.title }}</router-link
+          <router-link
+              :to="'/mpeditor/page/' + item.type.toLowerCase()+'/'+item.id"
+              class="nav-link"
+              tag="button">
+            {{ item.title }}
+          </router-link
           >
         </li>
 
@@ -91,13 +95,13 @@
                   </select>
                 </div>
                 <div class="mb-3">
-                  <label for="exampleFormControlInput1" class="form-label">Page Title</label>
+                  <label class="form-label">Page Title</label>
                   <input type="text" class="form-control" placeholder="My Page" v-model="newPageTitle">
                 </div>
                 <div>
                   <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" checked="">
-                    <label class="form-check-label" for="exampleCheck1">add to navigation</label>
+                    <label class="form-check-label">add to navigation</label>
                   </div>
                 </div>
               </div>
@@ -172,6 +176,7 @@ export default {
         type: 'static',
         title:'Prices'
       }],
+      /*
       pages:[{
         splash:{
           title:'',
@@ -182,8 +187,24 @@ export default {
             bgimg:false
           },
         }
-      },
-      ]
+      }]
+      */
+      pages:[{
+        id:1,
+        type: 'booking',
+        title: 'Booking',
+        publish: true
+      }, {
+        id: 2,
+        type: 'news',
+        title: 'News',
+        publish: true
+      },{
+        id:3,
+        type: 'static',
+        title: 'Hello World',
+        publish: true
+      }]
     },
     newMP:{}
   }),

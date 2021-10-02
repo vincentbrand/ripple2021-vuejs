@@ -3,44 +3,40 @@
     <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
       <div class="card shadow mb-4">
         <div class="card-header card-sale bg-bronze text-white">
-          Bronze
+          {{ $t('pages.packages.bronze') }}
         </div>
         <div class="card-body">
           <ul class="features-list">
-            <li>
-              <b><i>20</i></b> Bookings per day
-            </li>
-            <li>
-              Up to <b><i>500</i></b> Members
-            </li>
-            <li><i class="fas fa-check"></i> Multiple Venues</li>
-            <li class="text-cutoff"><i class="fas fa-check"></i> Custom Layouts and Design</li>
-            <li><i class="fas fa-times"></i> Free Updates</li>
-            <li class="text-cutoff"><i class="fas fa-times"></i> Web version and Mini program</li>
-            <li><i class="fas fa-times"></i> Automatic Reports</li>
-            <li><i class="fas fa-times"></i> Team Management</li>
-            <li><i class="fas fa-times"></i> Full Support</li>
-            <li><i class="fas fa-times"></i> SMS notifications</li>
+            <li v-html="$t('pages.packages.bookingperday', [10])"></li>
+            <li v-html="$t('pages.packages.members', ['500'])"></li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.venues') }}</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> {{ $t('pages.packages.layouts') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.updates') }}</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> {{ $t('pages.packages.webversions') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.reports') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.team') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.fullsupport') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.sms') }}</li>
           </ul>
           <hr>
           <p class="old-price">¥1288</p>
           <h6 class="price">¥888</h6>
           <hr>
           <div class="row">
-            <div class="col-7">
+            <div class="col-6">
               <router-link to="/purchase/cart" class="btn btn-info btn-block btn-sm text-white">
-                <i class="fas fa-shopping-basket"></i> Add <span class="hide-on-mobile">to Basket</span>
+                <i class="fas fa-shopping-basket mr-2"></i> {{ $t('pages.packages.add') }}
               </router-link>
             </div>
-            <div class="col-5">
+            <div class="col-6">
               <router-link to="/purchase/cart" class="btn btn-success btn-block btn-sm text-white">
-                <i class="fas fa-shopping-basket"></i> Buy
+                <i class="fas fa-money-bill mr-2"></i> {{ $t('pages.packages.buy') }}
               </router-link>
             </div>
           </div>
           <hr />
           <router-link to="support" class="btn btn-primary btn-block btn-sm text-white">
-            <i class="fas fa-phone"></i> CONTACT US
+            <i class="fas fa-phone"></i> {{ $t('pages.packages.contact') }}
           </router-link>
         </div>
       </div>
@@ -49,44 +45,40 @@
     <div class="col-xl-3 col-lg-6 col-md-6">
       <div class="card shadow mb-4">
         <div class="card-header card-sale bg-silver">
-          Silver
+          {{ $t('pages.packages.silver') }}
         </div>
         <div class="card-body">
           <ul class="features-list">
-            <li>
-              <b><i>50</i></b> Bookings per day
-            </li>
-            <li>
-              Up to <b><i>1000</i></b> Members
-            </li>
-            <li><i class="fas fa-check"></i> Multiple Venues</li>
-            <li class="text-cutoff"><i class="fas fa-check"></i> Custom Layouts and Design</li>
-            <li><i class="fas fa-check"></i> Free Updates</li>
-            <li class="text-cutoff"><i class="fas fa-check"></i> Web version and Mini program</li>
-            <li><i class="fas fa-times"></i> Automatic Reports</li>
-            <li><i class="fas fa-times"></i> Team Management</li>
-            <li><i class="fas fa-times"></i> Full Support</li>
-            <li><i class="fas fa-times"></i> SMS notifications</li>
+            <li v-html="$t('pages.packages.bookingperday', [50])"></li>
+            <li v-html="$t('pages.packages.members', ['1.000'])"></li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.venues') }}</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> {{ $t('pages.packages.layouts') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.updates') }}</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> {{ $t('pages.packages.webversions') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.reports') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.team') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.fullsupport') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.sms') }}</li>
           </ul>
           <hr>
           <p class="old-price">¥2588</p>
           <h6 class="price">¥1888</h6>
           <hr>
           <div class="row">
-            <div class="col-7">
+            <div class="col-6">
               <router-link to="/purchase/cart" class="btn btn-info btn-block btn-sm text-white">
-                <i class="fas fa-shopping-basket"></i> Add <span class="hide-on-mobile">to Basket</span>
+                <i class="fas fa-shopping-basket mr-2"></i> {{ $t('pages.packages.add') }}
               </router-link>
             </div>
-            <div class="col-5">
+            <div class="col-6">
               <router-link to="/purchase/cart" class="btn btn-success btn-block btn-sm text-white">
-                <i class="fas fa-shopping-basket"></i> Buy
+                <i class="fas fa-money-bill mr-2"></i> {{ $t('pages.packages.buy') }}
               </router-link>
             </div>
           </div>
           <hr />
           <router-link to="support" class="btn btn-primary btn-block btn-sm text-white">
-            <i class="fas fa-phone"></i> CONTACT US
+            <i class="fas fa-phone"></i> {{ $t('pages.packages.contact') }}
           </router-link>
         </div>
       </div>
@@ -95,44 +87,40 @@
     <div class="col-xl-3 col-lg-6 col-md-6">
       <div class="card shadow mb-4">
         <div class="card-header card-sale bg-gold2">
-          Gold
+          {{ $t('pages.packages.gold') }}
         </div>
         <div class="card-body">
           <ul class="features-list">
-            <li>
-              <b><i>100</i></b> Bookings per day
-            </li>
-            <li>
-              Up to <b><i>5000</i></b> Members
-            </li>
-            <li><i class="fas fa-check"></i> Multiple Venues</li>
-            <li class="text-cutoff"><i class="fas fa-check"></i> Custom Layouts and Design</li>
-            <li><i class="fas fa-check"></i> Free Updates</li>
-            <li class="text-cutoff"><i class="fas fa-check"></i> Web version and Mini program</li>
-            <li><i class="fas fa-check"></i> Automatic Reports</li>
-            <li><i class="fas fa-check"></i> Team Management</li>
-            <li><i class="fas fa-check"></i> Full Support</li>
-            <li><i class="fas fa-check"></i> SMS notifications</li>
+            <li v-html="$t('pages.packages.bookingperday', [100])"></li>
+            <li v-html="$t('pages.packages.members', ['5.000'])"></li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.venues') }}</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> {{ $t('pages.packages.layouts') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.updates') }}</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> {{ $t('pages.packages.webversions') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.reports') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.team') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.fullsupport') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.sms') }}</li>
           </ul>
           <hr>
           <p class="old-price">¥3788</p>
           <h6 class="price">¥2888</h6>
           <hr>
           <div class="row">
-            <div class="col-7">
+            <div class="col-6">
               <router-link to="/purchase/cart" class="btn btn-info btn-block btn-sm text-white">
-                <i class="fas fa-shopping-basket"></i> Add  <span class="hide-on-mobile">to Basket</span>
+                <i class="fas fa-shopping-basket mr-2"></i> {{ $t('pages.packages.add') }}
               </router-link>
             </div>
-            <div class="col-5">
+            <div class="col-6">
               <router-link to="/purchase/cart" class="btn btn-success btn-block btn-sm text-white">
-                <i class="fas fa-shopping-basket"></i> Buy
+                <i class="fas fa-money-bill mr-2"></i> {{ $t('pages.packages.buy') }}
               </router-link>
             </div>
           </div>
           <hr />
           <router-link to="support" class="btn btn-primary btn-block btn-sm text-white">
-            <i class="fas fa-phone"></i> CONTACT US
+            <i class="fas fa-phone"></i> {{ $t('pages.packages.contact') }}
           </router-link>
         </div>
       </div>
@@ -141,42 +129,40 @@
     <div class="col-xl-3 col-lg-6 col-md-6">
       <div class="card shadow mb-4">
         <div class="card-header card-sale bg-platinum">
-          Platinum
+          {{ $t('pages.packages.platinum') }}
         </div>
         <div class="card-body">
           <ul class="features-list">
-            <li>Unlimited Bookings</li>
-            <li>
-              Up to <b><i>10.000</i></b> Members
-            </li>
-            <li><i class="fas fa-check"></i> Multiple Venues</li>
-            <li class="text-cutoff"><i class="fas fa-check"></i> Custom Layouts and Design</li>
-            <li><i class="fas fa-check"></i> Free Updates</li>
-            <li class="text-cutoff"><i class="fas fa-check"></i> Web version and Mini program</li>
-            <li><i class="fas fa-check"></i> Automatic Reports</li>
-            <li><i class="fas fa-check"></i> Team Management</li>
-            <li><i class="fas fa-check"></i> Full Support</li>
-            <li><i class="fas fa-check"></i> SMS notifications</li>
+            <li>{{ $t('pages.packages.unlimitedbookingperday') }}</li>
+            <li v-html="$t('pages.packages.members', ['10.000'])"></li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.venues') }}</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> {{ $t('pages.packages.layouts') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.updates') }}</li>
+            <li class="text-cutoff"><i class="fas fa-check"></i> {{ $t('pages.packages.webversions') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.reports') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.team') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.fullsupport') }}</li>
+            <li><i class="fas fa-check"></i> {{ $t('pages.packages.sms') }}</li>
           </ul>
           <hr>
           <p class="old-price">¥8888</p>
           <h6 class="price">¥6666</h6>
           <hr>
           <div class="row">
-            <div class="col-7">
+            <div class="col-6">
               <router-link to="/purchase/cart" class="btn btn-info btn-block btn-sm text-white">
-                <i class="fas fa-shopping-basket"></i> Add <span class="hide-on-mobile">to Basket</span>
+                <i class="fas fa-shopping-basket mr-2"></i> {{ $t('pages.packages.add') }}
               </router-link>
             </div>
-            <div class="col-5">
+            <div class="col-6">
               <router-link to="/purchase/cart" class="btn btn-success btn-block btn-sm text-white">
-                <i class="fas fa-shopping-basket"></i> Buy
+                <i class="fas fa-money-bill mr-2"></i> {{ $t('pages.packages.buy') }}
               </router-link>
             </div>
           </div>
           <hr />
           <router-link to="support" class="btn btn-primary btn-block btn-sm text-white">
-            <i class="fas fa-phone"></i> CONTACT US
+            <i class="fas fa-phone"></i> {{ $t('pages.packages.contact') }}
           </router-link>
         </div>
       </div>

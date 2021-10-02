@@ -27,6 +27,7 @@
         "errhint": "Looks like you found a bug in the system...",
         "errback": "Back to Dashboard",
         "ok": "Yes",
+        "edit": "Edit",
         "cancel": "Cancel",
         "deleteHint": "Are you sure you want to delete it?",
         "warning": "warning",
@@ -36,7 +37,9 @@
         "upload": "Drag the file here, or click Upload",
         "previous": "Previous",
         "next": "Next",
-        "filter": "Filter"
+        "filter": "Filter",
+        "newbooking": "New Booking",
+        "contact": "Contact"
     },
     "datatime": {
         "monday":"Monday",
@@ -67,8 +70,10 @@
             "chinese": "中文",
             "dutch": "Nederlands",
             "cart": "Cart",
+            "cart_empty": "No products in cart",
             "cartfooter": "Go to Cart",
             "alerttop": "Alerts",
+            "alert_empty": "No unread alerts",
             "alertfooter": "Show All Alerts",
             "messagetop": "Inbox",
             "messagefooter": "Read All Message",
@@ -117,7 +122,10 @@
             "campaign": "Campaign Progress",
             "revenue": "Revenue",
             "signups": "Signups",
-            "traffic": "Traffic"
+            "traffic": "Traffic",
+            "todaysbookings": "Today's Bookings",
+            "": "",
+            "": ""
         },
         "support": {
             "formTitle": "Support Form",
@@ -283,6 +291,26 @@
             "alipay": "Alipay",
             "dearcustomer": "Dear Customer",
             "timestatement": "All our time calculations we count one month as 31 days. This means that for every year you will get an extra week automatically added to your purchase."
+        },
+        "packages": {
+            "bronze": "Bronze",
+            "silver": "Silver",
+            "gold": "Gold",
+            "platinum": "Platinum",
+            "bookingperday": "<b><i>{0}</i></b> Bookings per day",
+            "unlimitedbookingperday": "Unlimited Bookings",
+            "members": "Up to <b><i>{0}</i></b> Members",
+            "venues": "Multiple Venues",
+            "layouts": "Multiple Venues",
+            "freeupdates": "Free Updates",
+            "webversion": "Webversion and Mini Program",
+            "reports": "Automatic Reports",
+            "team": "Team Management",
+            "fullsupport":"Full Support",
+            "sms":"SMS Notifications",
+            "add": "Add",
+            "buy": "Buy",
+            "contact": "Contact Us"
         }
     }
 }

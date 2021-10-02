@@ -25,8 +25,8 @@ const rs = [
         component: () => import('@/views/Dashboard/Index.vue'),
     },
     {
-        path: '/webpage',
-        name: 'webpage',
+        path: '/web/editor',
+        name: 'webeditor',
         component: () => import('@/views/Editor/Webpage.vue'),
     },
     // settings
@@ -132,47 +132,46 @@ const rs = [
         component: () => import('@/views/Members/detail'),
     },
   // emulator
-  {
-    path: '/emulator',
+    {
+    path: '/mpeditor',
     component: resolve => require(['@/views/Editor/index'], resolve),
-    name: 'emulator',
+    name: 'mpeditor',
     children: [
-      {
-        path: 'setting',
-        component: () => import('@/views/Editor/config-content/setting'),
-        name: 'setting'
-      },
-      {
-        path: 'navigation',
-        component: () => import('@/views/Editor/config-content/navigation'),
-        name: 'navigation'
-      },
-      {
-        path: 'splash',
-        component: () => import('@/views/Editor/config-content/splash'),
-        name: 'splash'
-      },
-      {
-        path: 'news',
-        component: () => import('@/views/Editor/config-content/news'),
-        name: 'news'
-      },
-      {
-        path: 'booking',
-        component: () => import('@/views/Editor/config-content/booking'),
-        name: 'booking'
-      },
-      {
-        path: 'contact',
-        component: () => import('@/views/Editor/config-content/contact'),
-        name: 'contact'
-      },
         {
-            path: 'static/:id?',
+            path: 'setting',
+            component: () => import('@/views/Editor/config-content/setting'),
+            name: 'setting'
+        },
+        {
+            path: 'navigation',
+            component: () => import('@/views/Editor/config-content/navigation'),
+            name: 'navigation'
+        },
+        {
+            path: 'page/splash/:id?',
+            component: () => import('@/views/Editor/config-content/splash'),
+            name: 'splash'
+        },
+        {
+            path: 'page/news/:id?',
+            component: () => import('@/views/Editor/config-content/news'),
+            name: 'news'
+        },
+        {
+            path: 'page/booking/:id?',
+            component: () => import('@/views/Editor/config-content/booking'),
+            name: 'booking'
+        },
+        {
+            path: 'page/contact/:id?',
+            component: () => import('@/views/Editor/config-content/contact'),
+            name: 'contact'
+        },
+        {
+            path: 'page/static/:id?',
             component: () => import('@/views/Editor/config-content/static'),
             name: 'static'
-        },
-
+        }
     ]
   },
     {
